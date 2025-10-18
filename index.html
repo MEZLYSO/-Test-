@@ -1,0 +1,405 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Fusión Fitness — Tu bienestar, es nuestro objetivo</title>
+  <meta name="description"
+    content="Fusión Fitness: alimentos fitness y rutinas personalizadas. Venta online desde Jilotepec, Estado de México.">
+  <style>
+    /* Reset ligero */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0
+    }
+
+    html,
+    body {
+      height: 100%;
+      font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+      color: #111;
+      background: #f7fafc
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none
+    }
+
+    /* Contenedor */
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 24px
+    }
+
+    /* Header */
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 12px 0
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px
+    }
+
+    .logo {
+      width: 100px;
+      height: 64px;
+      border-radius: 8px;
+      background: #e2e8f0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700
+    }
+
+    .logo img {
+      width: 100%;
+      height: auto;
+    }
+
+    .site-title {
+      font-size: 1.25rem;
+      font-weight: 700
+    }
+
+    .slogan {
+      font-size: 0.875rem;
+      color: #4a5568
+    }
+
+    /* Hero */
+    .hero {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 18px;
+      align-items: center;
+      padding: 36px 0
+    }
+
+    @media(min-width:880px) {
+      .hero {
+        grid-template-columns: 1fr 420px
+      }
+    }
+
+    .hero-text h1 {
+      font-size: 2rem;
+      line-height: 1.05;
+      margin-bottom: 12px
+    }
+
+    .hero-text p {
+      color: #4a5568;
+      margin-bottom: 18px
+    }
+
+    .cta-row {
+      display: flex;
+      gap: 12px
+    }
+
+    .btn {
+      padding: 12px 18px;
+      border-radius: 10px;
+      cursor: pointer;
+      border: 0;
+      font-weight: 600
+    }
+
+    .btn-primary {
+      background: #2b6cb0;
+      color: white
+    }
+
+    .btn-ghost {
+      background: transparent;
+      border: 1px solid #cbd5e0
+    }
+
+    /* Hero imagen placeholder */
+    .hero-image {
+      width: 100%;
+      height: 280px;
+      border-radius: 12px;
+      background: #edf2f7;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden
+    }
+
+    .hero-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover
+    }
+
+    /* Secciones */
+    .grid-3 {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 18px;
+      margin-top: 28px
+    }
+
+    @media(min-width:880px) {
+      .grid-3 {
+        grid-template-columns: repeat(3, 1fr)
+      }
+    }
+
+    .card {
+      background: white;
+      padding: 18px;
+      border-radius: 12px;
+      box-shadow: 0 6px 18px rgba(16, 24, 40, 0.06)
+    }
+
+    .card img {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+      border-radius: 8px;
+      margin-bottom: 12px
+    }
+
+    .card h3 {
+      margin-bottom: 8px
+    }
+
+    .small {
+      font-size: 0.9rem;
+      color: #4a5568
+    }
+
+    /* Productos */
+    .products {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 16px;
+      margin-top: 20px
+    }
+
+    @media(min-width:720px) {
+      .products {
+        grid-template-columns: repeat(2, 1fr)
+      }
+    }
+
+    /* Formulario */
+    form {
+      display: grid;
+      gap: 12px;
+      margin-top: 14px
+    }
+
+    input,
+    textarea,
+    select {
+      padding: 10px;
+      border-radius: 8px;
+      border: 1px solid #e2e8f0
+    }
+
+    input[type="submit"] {
+      background: #2b6cb0;
+      color: white;
+      border: 0;
+      padding: 12px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: 600
+    }
+
+    footer {
+      margin-top: 36px;
+      padding: 18px 0;
+      color: #718096;
+      font-size: 0.9rem;
+      text-align: center
+    }
+
+    /* Placeholder estilo cuando no hay imagen (se ve mejor en editores) */
+    .image-placeholder {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, #edf2f7, #e6fffa);
+      color: #4a5568;
+      font-weight: 600
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="logo">
+          <img src="./logo.jpeg" alt="Fusión Fitness - Logo" style="width:100px;height:58px;object-fit:contain">
+        </div>
+        <div>
+          <div class="site-title">Fusión Fitness</div>
+          <div class="slogan">Tu bienestar, es nuestro objetivo Fusión Fitness.</div>
+        </div>
+      </div>
+      <nav>
+        <a href="#productos" style="margin-right:12px">Productos</a>
+        <a href="#rutinas" style="margin-right:12px">Rutinas</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <div class="hero-text">
+        <h1>Alimentos fitness + Rutinas personalizadas</h1>
+        <p>Compra suplementos y alimentos pensados para tus objetivos y recibe rutinas hechas a tu medida. Envíos desde
+          Jilotepec, Estado de México a todo el país.</p>
+        <div class="cta-row">
+          <button class="btn btn-primary">Comprar ahora</button>
+          <button class="btn btn-ghost">Ver planes</button>
+        </div>
+
+        <div style="margin-top:18px">
+          <strong>¿Tienes dudas?</strong>
+          <p class="small">Contáctanos y te asesoramos para elegir productos y rutinas.</p>
+        </div>
+      </div>
+
+      <div class="hero-image">
+        <!-- HERO IMAGE: pega la URL de la imagen aquí reemplazando data-src o el atributo src -->
+        <img
+          src="https://us.123rf.com/450wm/dgm/dgm1803/dgm180300230/98085038-sports-nutrition-supplements-healthy-food-and-dumbbells-on-a-black-background-fitness.jpg"
+          alt="Imagen hero - Fusión Fitness">
+      </div>
+    </section>
+
+    <!-- Sección: Beneficios / por qué elegirnos -->
+    <section style="margin-top:10px">
+      <div class="grid-3">
+        <div class="card">
+          <h3>Alimentos seleccionados</h3>
+          <!-- IMAGEN: reemplaza data-src por la url de la imagen del producto/beneficio -->
+          <img src="https://hips.hearstapps.com/hmg-prod/images/alimentos-para-tomar-antes-1621781198.png"
+            alt="Alimentos health">
+          <p class="small">Productos con ingredientes naturales, perfil nutricional claro y empaques listos para envío.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Rutinas personalizadas</h3>
+          <img src="https://inuba.com/wp-content/uploads/2022/03/como-crear-tu-propia-rutina-ejercicios-1-768x512.webp"
+            alt="Rutina personalizada">
+          <p class="small">Planes de entrenamiento adaptados a tu nivel, objetivos y el equipo que tengas en casa.</p>
+        </div>
+
+        <div class="card">
+          <h3>Atención cercana</h3>
+          <img
+            src="https://vitruve.fit/wp-content/uploads/2024/05/Skills-You-Want-to-Master-If-You-Want-to-Be-a-Great-SC-Coach5.jpg"
+            alt="Soporte al cliente">
+          <p class="small">Asesoría rápida y envíos desde Jilotepec. Política de devoluciones y soporte en línea.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Productos destacados -->
+    <section id="productos">
+      <h2 style="margin-top:26px">Productos destacados</h2>
+      <div class="products">
+        <div class="card">
+          <img src="https://www.tiendasenforma.com/cdn/shop/articles/proteina_en_polvo.jpg?v=1701381805"
+            alt="Producto 1">
+          <h3>Proteína Natural</h3>
+          <p class="small">Sabor vainilla — 900g. Ideal para recuperación y aumento de masa magra.</p>
+          <div style="margin-top:8px;display:flex;gap:8px">
+            <button class="btn btn-primary">Agregar</button>
+            <button class="btn btn-ghost">Ver</button>
+          </div>
+        </div>
+
+        <div class="card">
+          <img
+            src="https://www.soycorredor.es/uploads/s1/45/47/31/5cb57a5a0ce694ad4f8b4599-como-elaborar-barritas-energeticas-caseras-para-deportistas-nzm.jpeg"
+            alt="Producto 2">
+          <h3>Barras energéticas</h3>
+          <p class="small">Pack de 12 — ricas en proteínas y baja en azúcares.</p>
+          <div style="margin-top:8px;display:flex;gap:8px">
+            <button class="btn btn-primary">Agregar</button>
+            <button class="btn btn-ghost">Ver</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Rutinas -->
+    <section id="rutinas">
+      <h2 style="margin-top:26px">Planes de entrenamiento</h2>
+      <div class="grid-3" style="margin-top:12px">
+        <div class="card">
+          <h3>Plan Inicio</h3>
+          <p class="small">3 días/semana — ideal para quienes comienzan.</p>
+        </div>
+        <div class="card">
+          <h3>Plan Intermedio</h3>
+          <p class="small">5 días/semana — enfoque en fuerza y composición corporal.</p>
+        </div>
+        <div class="card">
+          <h3>Plan Avanzado</h3>
+          <p class="small">Entrenamientos avanzados y programación por objetivos.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contacto / formulario -->
+    <section id="contacto">
+      <h2 style="margin-top:26px">Contacto</h2>
+      <p class="small">Domicilio fiscal: Jilotepec, Estado de México — Operación 100% en línea.</p>
+      <form action="#"
+        onsubmit="event.preventDefault();alert('Formulario de contacto simulado — aquí enlazas tu backend');">
+        <input type="text" name="nombre" placeholder="Tu nombre" required>
+        <input type="email" name="email" placeholder="Correo electrónico" required>
+        <select name="asunto">
+          <option>Consulta sobre productos</option>
+          <option>Solicitar rutina personalizada</option>
+          <option>Soporte / envíos</option>
+        </select>
+        <textarea name="mensaje" rows="4"
+          placeholder="Cuéntanos tu objetivo (ej: bajar 5 kg, ganar masa muscular)"></textarea>
+        <input type="submit" value="Enviar mensaje">
+      </form>
+    </section>
+
+    <footer>
+      © Fusión Fitness — Venta en línea de alimentos fitness y rutinas. Domicilio fiscal: Jilotepec, Estado de México.
+    </footer>
+  </div>
+
+  <script>
+    // Pequeño helper: si quieres usar imágenes colocando la URL en data-src,
+    // este script transferirá data-src -> src automáticamente.
+    document.addEventListener('DOMContentLoaded', () => {
+      document.querySelectorAll('img[data-src]').forEach(img => {
+        const url = img.getAttribute('data-src');
+        if (url && url.trim() !== '' && !url.includes('PUT_')) {
+          img.src = url;
+        } else {
+          // si no hay URL, colocamos una imagen placeholder opcional (editable)
+          img.classList.add('image-placeholder');
+          img.style.objectFit = 'cover';
+          img.alt = 'Imagen pendiente: coloca la URL en el atributo data-src o en src';
+        }
+      });
+    });
+  </script>
+</body>
+
+</html>
